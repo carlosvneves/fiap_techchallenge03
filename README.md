@@ -1,11 +1,11 @@
 # Alura+Pós-Tech - TechChallenge 03
 
-[Repositório] (https://github.com/carlosvneves/fiap_techchallenge02) da resposta ao TechChallenge 02 da turma 3DTAT-Pós-Tech.
+[Repositório] (https://github.com/carlosvneves/fiap_techchallenge02) da resposta ao TechChallenge 03 da turma 3DTAT-Pós-Tech.
 
 O trabalho foi desenvolvido em dupla:
 
 - *Carlos Eduardo Veras Neves* - rm 353068
-- *Emily Vaculik* - rm 352846
+- *Emily da Silva Vaculik* - rm 352846
 
 # Descrição do Problema
 
