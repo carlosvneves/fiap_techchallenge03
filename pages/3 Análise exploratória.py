@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 from google.oauth2 import service_account
 from google.cloud import bigquery
-import plotly.express as px
 
+# Carregar e exibir uma imagem JPEG
+imagem = open("./pages/images/img_data_explore.jpeg", "rb").read()
+st.image(imagem, caption='ANÁLISE', use_column_width=True)
 
 # Carregar e exibir uma imagem JPEG
 imagem = open("./pages/images/img_data_explore.jpeg", "rb").read()
@@ -43,7 +45,7 @@ with aba1:
              para compreender os impactos da crise sanitária em diversas esferas da sociedade brasileira.
              ''')
     
-    st.markdown('<h5 style="color: yellow;">Seleção dos Meses </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: blue;">Seleção dos Meses </h5>', unsafe_allow_html=True)
 
 
     st.write(''' 
@@ -63,7 +65,7 @@ with aba1:
               desse contexto sem precedentes.
                                 ''')
     
-    st.markdown('<h5 style="color: yellow;">a.   Caracterização dos sintomas clínicos da população </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: blue;">a.   Caracterização dos sintomas clínicos da população </h5>', unsafe_allow_html=True)
 
     st.write(''' 
         A compreensão detalhada dos sintomas clínicos relatados pela população nos permitirá não apenas 
@@ -77,7 +79,7 @@ with aba1:
 
                 ''')
 
-    st.markdown('<h5 style="color: yellow;">b.   Comportamento da população na época da COVID-19 </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: blue;">b.   Comportamento da população na época da COVID-19 </h5>', unsafe_allow_html=True)
 
     st.write(''' 
             O objetivo é fornecer uma análise abrangente sobre como diferentes grupos demográficos, como idade, 
@@ -88,7 +90,7 @@ with aba1:
              
                 ''')
     
-    st.markdown('<h5 style="color: yellow;">c.   Características econômicas da Sociedade. </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: blue;">c.   Características econômicas da Sociedade. </h5>', unsafe_allow_html=True)
 
     st.write(''' 
             Utilizando os dados fornecidos pelo estudo PNAD-COVID 19 do IBGE, é possível compreender como a 
@@ -97,30 +99,9 @@ with aba1:
              econômicas da sociedade brasileira foram afetadas pela pandemia da COVID-19 durante
               os meses de maio, junho e julho? Houve variações significativas nos indicadores econômicos?
                           
-            ''')
-with aba2: #Perfil
-
-    
-    st.markdown('<h5 style="color: yellow;">a.   Divisão da população entrevistada por Unidade da Federação </h5>', unsafe_allow_html=True)
-    df_uf = select_view('view_dados_por_uf')
-    # st.write(df_uf)
-    fig = px.bar(df_uf, x="sigla_uf", y="pop")
-    st.plotly_chart(fig)
-    
-    
-    st.markdown('<h5 style="color: yellow;">b.   Divisão da população entrevistada por Sexo </h5>', unsafe_allow_html=True)
-    df_sexo = select_view('view_dados_por_sexo')
-    # st.write(df_sexo)
-    fig = px.pie(df_sexo, values="pop", names="sexo", title="Populacao por sexo", color_discrete_sequence=px.colors.sequential.RdBu)
-    st.plotly_chart(fig)
-
-
-    st.markdown('<h5 style="color: yellow;">a.   Divisão da população entrevistada por Unidade da Federação </h5>', unsafe_allow_html=True)
-    df_idade_sexo = select_view('view_dados_idade_sexo')
-    st.write(df_idade_sexo)
-    #fig = px.bar(df_uf, x="sigla_uf", y="pop")
-    #st.plotly_chart(fig)
-
+                ''')
+with aba2:
+    client = bigquery_client()
 
     # Perform query.
     # Uses st.cache_data to only rerun when the query changes or after 10 min.
