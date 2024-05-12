@@ -158,7 +158,7 @@ with aba2:
                 'Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?' ,
                 'Na semana passada, estava temporariamente afastado de algum trabalho?' ,
                 'Qual o principal motivo deste afastamento temporário?',
-                'Esse trabalho era na área:',
+                'Esse trabalho era na área (Federal, Estadual, Municipal, Não se Aplica)',
                 ]}
         
     df = pd.DataFrame(dados3)
@@ -171,17 +171,9 @@ with aba3:
     st.title('ARMAZENAMENTO EM NUVEM')
 
     
-    # def main():
     st.markdown('<h5 style="color: white;">GOOGLE CLOUD </h5>', unsafe_allow_html=True)
 
-    # if __name__ == "__main__":
-    #     main()
-    #
-    # def main():
     st.markdown('<h5 style="color: blue;">Explorando o Google Cloud e o BigQuery para Análise de Dados: </h5>', unsafe_allow_html=True)
-
-    # if __name__ == "__main__":
-    #     main()
 
     st.write(''' 
             No mundo moderno impulsionado por dados, as organizações estão cada vez mais recorrendo a soluções 
@@ -191,12 +183,8 @@ with aba3:
           ''')  
 
 
-    # def main():
     st.markdown('<h5 style="color: blue;">Google Cloud: Uma Visão Geral </h5>', unsafe_allow_html=True)
 
-    # if __name__ == "__main__":
-    #     main()
-    #
     st.write(''' 
             O Google Cloud é uma plataforma de computação em nuvem abrangente oferecida pelo Google,
               que fornece uma infraestrutura robusta e flexível para empresas de todos os tamanhos.
@@ -205,11 +193,7 @@ with aba3:
 
           ''')  
 
-    # def main():
     st.markdown('<h5 style="color: blue;">BigQuery: Uma Ferramenta de Análise de Dados em Escala </h5>', unsafe_allow_html=True)
-
-    # if __name__ == "__main__":
-    #     main()
 
     st.write(''' 
             Dentro do ecossistema do Google Cloud, o BigQuery se destaca como uma das ferramentas mais
@@ -224,13 +208,8 @@ with aba3:
               federadas, integração com ferramentas de visualização de dados, suporte a machine learning e muito mais.
           ''') 
 
-    # def main():
     st.markdown('<h5 style="color: blue;">Conexões e Importância para Análise de Dados </h5>', unsafe_allow_html=True)
 
-    # if __name__ == "__main__":
-    #     main()
-
-    
     st.write(''' 
         a.   Escalabilidade e Desempenho: O Google Cloud e o BigQuery oferecem uma infraestrutura
               altamente escalável e de alto desempenho, permitindo que as organizações processem 
@@ -263,18 +242,8 @@ with aba3:
               valiosos de seus dados para impulsionar a inovação, a eficiência operacional e a vantagem competitiva.
           ''') 
 
-    # def main():
     st.markdown('<h5 style="color: white;">Abaixo nossa arquitetura de solução e aplicações realizadas: </h5>', unsafe_allow_html=True)
-
-    # if __name__ == "__main__":
-    #     main()
-    #
-    # def main():
 
     # Carregar e exibir uma imagem JPEG
     imagem = open("./pages/images/img_project_arch.jpeg", "rb").read()
     st.image(imagem, caption='ARQUITETURA', use_column_width=True)
-
-    # if __name__ == "__main__":
-    #     main()
-    
