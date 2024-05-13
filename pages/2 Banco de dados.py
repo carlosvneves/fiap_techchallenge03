@@ -2,34 +2,17 @@ import streamlit as st
 import pandas as pd
 
 
-def main():
-
-    # Carregar e exibir uma imagem JPEG
-    imagem = open("D:\\FIAP\\FASE 3\\TECH CHALLENGE\\STREAMLIT FASE 3\\COVID.jpeg", "rb").read()
-    st.image(imagem, caption='COVID19', use_column_width=True)
-
-if __name__ == "__main__":
-    main()
-
+imagem = open("./pages/images/img_covid_banner.jpeg", "rb").read()
+st.image(imagem, caption='COVID19', use_column_width=True)
 
 aba1, aba2, aba3 = st.tabs(['PNAD-COVID 19', 'PERGUNTAS', 'GOOGLE CLOUD'])
 
 with aba1:
     st.title('BANCO DE DADOS')
 
-    def main():
-        st.markdown('<h5 style="color: white;">PNAD-COVID 19 do IBGE </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: white;">PNAD-COVID 19 do IBGE </h5>', unsafe_allow_html=True)
 
-    if __name__ == "__main__":
-        main()
-
-
-    def main():
-        st.markdown('<h5 style="color: blue;">O QUE É? </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
-
+    st.markdown('<h5 style="color: blue;">O QUE É? </h5>', unsafe_allow_html=True)
 
     st.write(''' 
     A Pesquisa Nacional por Amostra de Domicílios - PNAD COVID19 é conduzida 
@@ -40,15 +23,7 @@ with aba1:
             mercado de trabalho, como ocupação e rendimentos.
             
             ''')
-
-
-
-    def main():
-     st.markdown('<h5 style="color: blue;">QUAL O OBJETIVO? </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
-
+    st.markdown('<h5 style="color: blue;">QUAL O OBJETIVO? </h5>', unsafe_allow_html=True)
 
     st.write(''' 
     O principal objetivo da PNAD COVID19 é estimar o número de pessoas com sintomas gripais 
@@ -85,18 +60,9 @@ with aba2:
           e que possam subsidiar estratégias eficazes de resposta e mitigação dos impactos da pandemia.
     ''')
     
-    def main():
-        st.markdown('<h5 style="color: blue;">TABELAS DE PERGUNTAS: </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: blue;">TABELAS DE PERGUNTAS: </h5>', unsafe_allow_html=True)
 
-    if __name__ == "__main__":
-        main()
-
-    def main():
-        st.markdown('<h5 style="color: white;">Parte 1 - Identificação e Controle: </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
-
+    st.markdown('<h5 style="color: white;">Parte 1 - Identificação e Controle: </h5>', unsafe_allow_html=True)
 
     dados = {
         'CÓDIGO': [
@@ -124,11 +90,7 @@ with aba2:
     df = pd.DataFrame(dados)
     st.dataframe(df, width=1000, height=350)
 
-    def main():
-            st.markdown('<h5 style="color: white;">Parte B - COVID19 - Todos os moradores: </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-            main()
+    st.markdown('<h5 style="color: white;">Parte B - COVID19 - Todos os moradores: </h5>', unsafe_allow_html=True)
 
 
     dados2 = {
@@ -167,6 +129,7 @@ with aba2:
             'Fez o exame coletado com cotonete na boca e/ou nariz (SWAB)?',
             'Qual o resultado?',
             'Qual foi o resultado do teste? Na semana passada, devido à pandemia do Coronavírus, em que medida o(a) Sr(a) restringiu o contato com as pessoas?'
+            
         ]
     }
 
@@ -176,24 +139,26 @@ with aba2:
 
     st.dataframe(df, width=1000, height=600)
 
-    def main():
-            st.markdown('<h5 style="color: white;">Parte C - Características de trabalho das pessoas de 14 anos ou mais de idade: </h5>', unsafe_allow_html=True)
+    # def main():
+    st.markdown('<h5 style="color: white;">Parte C - Características de trabalho das pessoas de 14 anos ou mais de idade: </h5>', unsafe_allow_html=True)
 
-    if __name__ == "__main__":
-            main()
-
-
+    # if __name__ == "__main__":
+    #         main()
+    #
+    #
     dados3 = {
             'CÓDIGO': [
                 'C001' ,
                 'C002' , 
                 'C003' , 
+                'C007D' ,
                 ],
                 
             'QUESTIONÁRIO': [
                 'Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?' ,
                 'Na semana passada, estava temporariamente afastado de algum trabalho?' ,
-                'Qual o principal motivo deste afastamento temporário?' 
+                'Qual o principal motivo deste afastamento temporário?',
+                'Esse trabalho era na área (Federal, Estadual, Municipal, Não se Aplica)',
                 ]}
         
     df = pd.DataFrame(dados3)
@@ -206,17 +171,9 @@ with aba3:
     st.title('ARMAZENAMENTO EM NUVEM')
 
     
-    def main():
-        st.markdown('<h5 style="color: white;">GOOGLE CLOUD </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: white;">GOOGLE CLOUD </h5>', unsafe_allow_html=True)
 
-    if __name__ == "__main__":
-        main()
-
-    def main():
-            st.markdown('<h5 style="color: blue;">Explorando o Google Cloud e o BigQuery para Análise de Dados: </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
+    st.markdown('<h5 style="color: blue;">Explorando o Google Cloud e o BigQuery para Análise de Dados: </h5>', unsafe_allow_html=True)
 
     st.write(''' 
             No mundo moderno impulsionado por dados, as organizações estão cada vez mais recorrendo a soluções 
@@ -226,11 +183,7 @@ with aba3:
           ''')  
 
 
-    def main():
-            st.markdown('<h5 style="color: blue;">Google Cloud: Uma Visão Geral </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
+    st.markdown('<h5 style="color: blue;">Google Cloud: Uma Visão Geral </h5>', unsafe_allow_html=True)
 
     st.write(''' 
             O Google Cloud é uma plataforma de computação em nuvem abrangente oferecida pelo Google,
@@ -240,11 +193,7 @@ with aba3:
 
           ''')  
 
-    def main():
-            st.markdown('<h5 style="color: blue;">BigQuery: Uma Ferramenta de Análise de Dados em Escala </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
+    st.markdown('<h5 style="color: blue;">BigQuery: Uma Ferramenta de Análise de Dados em Escala </h5>', unsafe_allow_html=True)
 
     st.write(''' 
             Dentro do ecossistema do Google Cloud, o BigQuery se destaca como uma das ferramentas mais
@@ -259,13 +208,8 @@ with aba3:
               federadas, integração com ferramentas de visualização de dados, suporte a machine learning e muito mais.
           ''') 
 
-    def main():
-            st.markdown('<h5 style="color: blue;">Conexões e Importância para Análise de Dados </h5>', unsafe_allow_html=True)
+    st.markdown('<h5 style="color: blue;">Conexões e Importância para Análise de Dados </h5>', unsafe_allow_html=True)
 
-    if __name__ == "__main__":
-        main()
-
-    
     st.write(''' 
         a.   Escalabilidade e Desempenho: O Google Cloud e o BigQuery oferecem uma infraestrutura
               altamente escalável e de alto desempenho, permitindo que as organizações processem 
@@ -298,18 +242,8 @@ with aba3:
               valiosos de seus dados para impulsionar a inovação, a eficiência operacional e a vantagem competitiva.
           ''') 
 
-    def main():
-            st.markdown('<h5 style="color: white;">Abaixo nossa arquitetura de solução e aplicações realizadas: </h5>', unsafe_allow_html=True)
-
-    if __name__ == "__main__":
-        main()
-
-    def main():
+    st.markdown('<h5 style="color: white;">Abaixo nossa arquitetura de solução e aplicações realizadas: </h5>', unsafe_allow_html=True)
 
     # Carregar e exibir uma imagem JPEG
-        imagem = open("D:\\FIAP\\FASE 3\\TECH CHALLENGE\\STREAMLIT FASE 3\\ARQUITETURA DO PROJETO.jpg", "rb").read()
-        st.image(imagem, caption='ARQUITETURA', use_column_width=True)
-
-    if __name__ == "__main__":
-        main()
-    
+    imagem = open("./pages/images/img_project_arch.jpeg", "rb").read()
+    st.image(imagem, caption='ARQUITETURA', use_column_width=True)
