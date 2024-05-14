@@ -2,6 +2,11 @@
 
 [Repositório] (https://github.com/carlosvneves/fiap_techchallenge03) da resposta ao TechChallenge 03 da turma 3DTAT-Pós-Tech.
 
+[Aplicação] (https://fiaptechchallenge03-3dtat.streamlit.app/)
+
+[Notebook de teste] (https://colab.research.google.com/drive/1iGatculTwjXTxH6aq4jIBL_0eUJ0MZmf?usp=sharing)
+
+
 O trabalho foi desenvolvido em dupla:
 
 - *Carlos Eduardo Veras Neves* - rm 353068
@@ -53,3 +58,16 @@ O trabalho foi desenvolvido em dupla:
         </p>
 </div>
 
+# Base de dados
+
+As tabelas e _views_ elaboradas para o trabalho estão disponíveis no Big Query, e foram construídas a partir da base de dados do próprio IBGE:
+
+```sql
+
+SELECT * FROM `basedosdados.br_ibge_pnad_covid.dicionario`
+
+```
+
+Um _print_ da base de dados pode ser vista abaixo:
+
+![Print da base de dados](./big_query_views.jpg)
