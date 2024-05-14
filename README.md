@@ -1,6 +1,6 @@
 # Alura+Pós-Tech - TechChallenge 03 #
 
-[Repositório] (https://github.com/carlosvneves/fiap_techchallenge02) da resposta ao TechChallenge 03 da turma 3DTAT-Pós-Tech.
+[Repositório] (https://github.com/carlosvneves/fiap_techchallenge03) da resposta ao TechChallenge 03 da turma 3DTAT-Pós-Tech.
 
 O trabalho foi desenvolvido em dupla:
 
@@ -53,13 +53,3 @@ O trabalho foi desenvolvido em dupla:
         </p>
 </div>
 
-# Seleção de dados
-
-
-# Métodos e Técnicas
-
-TODO
-
-# Acesso à aplicação web
-
-TODO

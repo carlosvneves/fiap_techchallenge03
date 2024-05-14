@@ -2,14 +2,9 @@ import streamlit as st
 import pandas as pd
 
 
-def main():
-
-    # Carregar e exibir uma imagem JPEG
-    imagem = open("D:\\FIAP\\FASE 3\\TECH CHALLENGE\\STREAMLIT FASE 3\\COVID.jpeg", "rb").read()
-    st.image(imagem, caption='COVID19', use_column_width=True)
-
-if __name__ == "__main__":
-    main()
+#     # Carregar e exibir uma imagem JPEG
+imagem = open("./pages/images/img_covid_banner.jpeg", "rb").read()
+st.image(imagem, caption='COVID19', use_column_width=True)
 
 st.title('DESCRIÇÃO DO PROBLEMA')
 
@@ -20,12 +15,7 @@ Identificação do problema enfrentado pelo hospital: entender o comportamento
           ''')  
 
 
-def main():
-    st.markdown('<h5 style="color: blue;">ANÁLISE PROPOSTA:</h5>', unsafe_allow_html=True)
-
-if __name__ == "__main__":
-    main()
-
+st.markdown('<h5 style="color: blue;">ANÁLISE PROPOSTA:</h5>', unsafe_allow_html=True)
 
 st.write(''' 
 Descrição da abordagem proposta para análise dos dados, incluindo o uso do estudo 
@@ -44,12 +34,7 @@ Mencionar o uso de banco de dados em nuvem para organização e análise dos dad
                    ''')  
 
 
-def main():
-    st.markdown('<h5 style="color: blue;">Definir as características-chave a serem analisadas: </h5>', unsafe_allow_html=True)
-
-if __name__ == "__main__":
-    main()
-
+st.markdown('<h5 style="color: blue;">Definir as características-chave a serem analisadas: </h5>', unsafe_allow_html=True)
 
 st.write(''' 
 a.   Caracterização dos sintomas clínicos da população;
